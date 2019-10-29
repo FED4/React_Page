@@ -1,12 +1,6 @@
 import React, { Component } from 'react';
 //import logo from './logo.svg';
-import './App.css';
-import NavBar from "./NavBar";
-import {Route, Switch} from "react-router-dom";
 
-import Home from "./HomeZh"
-import News from "./NewsZh"
-import NotFound from "./NotFound"
 
 /* eslint-disable */
 
@@ -14,18 +8,11 @@ class App extends Component {
   render() {
 
     return (
-      <div className="App1">
-        <NavBar />
-          <Switch>
-            <Route
-              exact path="/"
-              render={() => <Home />} />
-            <Route
-              exact path="/news"
-              render={() => <News />} />
-              <Route
-                render={() => <NotFound />} />
-          </Switch>
+      <div className="App">
+        HomeZh
+
+        +++++++++++++++++++++++++++++++++++++++++
+        +++++++++++++++++++++++++++++++++++++++++
       </div>
     );
   }
