@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import "./home.css";
 //import logo from './logo.svg';
 
 
@@ -9,27 +10,20 @@ class App extends Component {
 
     return (
       <div className="App">
-        HomeZh
+        <div className="img-big">
+          <a className="img-big" href="/act1">
+            <img className="" src="https://www.yuxiuk.com/images/activities/uk-china-summit-2017.jpg" alt="Brand" />
+          </a>
+        </div>
+        <div>
+          HomeZh
 
-        +++++++++++++++++++++++++++++++++++++++++
-        +++++++++++++++++++++++++++++++++++++++++
+          +++++++++++++++++++++++++++++++++++++++++
+          +++++++++++++++++++++++++++++++++++++++++
+        </div>
       </div>
     );
   }
 }
 
 export default App;
-
-
-/*  return (
-    <div className="App">
-      <div className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h2>Welcome to React</h2>
-      </div>
-      <p className="App-intro">
-        To get started, edit <code>src/App.js</code> and save to reload.
-      </p>
-      <div>content</div>
-    </div>
-  );*/

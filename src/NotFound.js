@@ -10,6 +10,8 @@ class App extends Component {
     return (
       <div className="App">
         404
+        这页还没做，竟然被你发现了= =
+        你来做吧~就这么愉悦地决定了！
       </div>
     );
   }
