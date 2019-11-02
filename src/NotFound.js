@@ -1,4 +1,10 @@
 import React, { Component } from 'react';
+import {
+  BrowserView,
+  MobileView,
+  isBrowser,
+  isMobile
+} from "react-device-detect";
 //import logo from './logo.svg';
 
 
@@ -6,14 +12,23 @@ import React, { Component } from 'react';
 
 class App extends Component {
   render() {
-
-    return (
-      <div className="App">
-        404
-        这页还没做，竟然被你发现了= =
-        你来做吧~就这么愉悦地决定了！
-      </div>
-    );
+      return (
+        <div>
+          <BrowserView>
+            <div className="App">
+              404
+              这页还没做，竟然被你发现了= =
+              你来做吧~就这么愉悦地决定了！
+            </div>
+          </BrowserView>
+          <MobileView>
+            <div className="App">
+              404
+              mobile
+            </div>
+          </MobileView>
+        </div>
+      );
   }
 }
 
