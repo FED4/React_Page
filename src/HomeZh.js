@@ -10,9 +10,9 @@ class App extends Component {
 
     return (
       <div className="App">
-        <div className="img-big">
-          <a className="img-big" href="/act1">
-            <img className="" src="https://www.yuxiuk.com/images/activities/uk-china-summit-2017.jpg" alt="Brand" />
+        <div className="img-">
+          <a className="img-" href="/">
+            <img className="img" src="https://www.yuxiuk.com/images/activities/uk-china-summit-2017.jpg"/>
           </a>
         </div>
         <div>
