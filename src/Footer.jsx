@@ -1,11 +1,18 @@
 import React, { Component } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Footer.css';
+import {
+  BrowserView,
+  MobileView,
+  isBrowser,
+  isMobile
+} from "react-device-detect";
 
 class NavBar extends Component {
   render() {
     return (
       <div>
+      <BrowserView>
 <footer class="page-footer font-small blue pt-4">
 <div class="container-fluid text-center text-md-left">
   <div class="row">
@@ -56,6 +63,15 @@ class NavBar extends Component {
   <a href="/"> ICCSSA</a>
 </div>
 </footer>
+</BrowserView>
+<MobileView>
+  <footer class="page-footer font-small blue pt-4">
+    <h5 class="text-uppercase">Footer Content</h5>
+    <div class="col-md-3 mb-md-0 mb-3">1</div>
+    <div class="col-md-3 mb-md-0 mb-3">2</div>
+    <div class="col-md-3 mb-md-0 mb-3">3</div>
+  </footer>
+</MobileView>
 
       </div>
     );

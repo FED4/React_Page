@@ -1,12 +1,18 @@
 import React, { Component } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Navbar.css';
+import {
+  BrowserView,
+  MobileView,
+  isBrowser,
+  isMobile
+} from "react-device-detect";
 
 class NavBar extends Component {
   render() {
     return (
       <div>
-
+      <BrowserView>
       <nav className="navbar navbar-inverse">
         <div className="container-fluid summit-blue">
 
@@ -51,7 +57,27 @@ class NavBar extends Component {
           </div>
         </div>
       </nav>
-
+      </BrowserView>
+      <MobileView>
+      <nav bg="primary" variant="dark">
+          <ul className="nav">
+          <li className=""><a href="/">Home</a></li>
+            <li className=""><a href="news">About 2019 Summit</a></li>
+            <li><a href="faqs">FAQs</a></li>
+            <li className="dropdown">
+              <a href="more" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">More <span className="caret"></span></a>
+              <ul className="dropdown-menu">
+                <li><a href="more1">Action</a></li>
+                <li><a href="more2">Another action</a></li>
+                <li><a href="more3">Something else here</a></li>
+                <li role="separator" className="divider"></li>
+                <li><a href="more4">Separated link</a></li>
+              </ul>
+            </li>
+            <li><a href="zh">中文</a></li>
+          </ul>
+          </nav>
+      </MobileView>
       </div>
     );
   }
