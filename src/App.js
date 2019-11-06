@@ -6,7 +6,7 @@ import Footer from "./Footer";
 import {Route, Switch} from "react-router-dom";
 
 import Home from "./HomeZh"
-import News from "./NewsZh"
+import Schedule from "./Schedule"
 import NotFound from "./NotFound"
 
 /* eslint-disable */
@@ -22,10 +22,10 @@ class App extends Component {
               exact path="/"
               render={() => <Home />} />
             <Route
-              exact path="/news"
-              render={() => <News />} />
-              <Route
-                render={() => <NotFound />} />
+              exact path="/schedule"
+              render={() => <Schedule />} />
+            <Route
+              render={() => <NotFound />} />
           </Switch>
         <Footer/>
       </div>

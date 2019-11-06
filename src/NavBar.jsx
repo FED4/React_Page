@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Redirect } from 'react-router';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Dropdown from 'react-bootstrap/Dropdown'
 import './Navbar.css';
@@ -32,6 +33,10 @@ class NavBar extends Component {
         menu_class: '',
       })
     }
+  }
+
+  jumpToHome = () => {
+    return (<Redirect to="/" />);
   }
 
   render() {
@@ -69,12 +74,12 @@ class NavBar extends Component {
 
               <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul className="nav navbar-nav navbar-left">
-                <a className="logo-container" href="#">
+                <a className="logo-container" href="/">
                   <img className="navbar-logo" src="https://i.imgur.com/RbGECQ1.png" alt="Brand" />
                 </a>
               </ul>
               <ul className="nav navbar-nav navbar-right navbar-ul">
-              <li className="navbar-text"><a href="/">SUMMIT</a></li>
+              <li className="navbar-text"><a href="schedule">SCHEDULE</a></li>
                 <li className="navbar-text"><a href="news">NEWS</a></li>
                 <li className="navbar-text"><a href="docs">DOCUMENTS & MATERIALS</a></li>
                 <li className="navbar-text"><a href="media">MEDIA INFOMATION</a></li>
@@ -88,11 +93,8 @@ class NavBar extends Component {
         <MobileView>
           <div>
             <div className={top_menu_class} >
-              <Lead text="This Is Your Title!" />
-                
+                <a className="jumpToHome" href="/">〈 Home</a>
                 <FontAwesomeIcon icon={faBars} className='top-menu-icon fa-3x' onClick={this.setToggleTopMenuClass}/>
-
-
 
               <div className='left'>
                 <Item text='Left1'/>
